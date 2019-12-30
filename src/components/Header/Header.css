@@ -1,44 +1,49 @@
 nav {
-  color: #011F26;
+  color: #011f26;
   display: inline;
 }
 
 header {
-  background-color: #05C7F2;
-  color: #011F26;
-  padding: 2vh 0vw 2vh 2vw;
+  background-color: #05c7f2;
+  color: #011f26;
+  /* padding: 2vh 0vw 2vh 2vw;
+  margin: 0 auto; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .logout-link {
   text-decoration: none;
-  color: #011F26;
-  padding: 10px;
+  color: #011f26;
+  /* padding: 10px;
   margin: 2.5%;
-  right: 0;
+  right: 0; */
 }
 
 .login-link {
   text-decoration: none;
-  color: #011F26;
-  padding: 10px;
-  margin: 2.5%;
+  color: #011f26;
+  /* padding: 10px;
+  margin: 2.5%; */
 }
 
 .register-link {
   text-decoration: none;
-  color: #011F26;
-  padding: 10px;
-  margin: 2.5%;
+  color: #011f26;
+  /* padding: 10px;
+  margin: 2.5%; */
 }
 
 .header-link {
-  color: #011F26;
+  color: #011f26;
   text-decoration: none;
   font-variant: small-caps;
-  margin-right: 6vw;
+  /* margin-right: 6vw; */
 }
 
 h1 {
-  display: inline;
-  margin-left: 10px;
+  /* display: inline;
+  margin-left: 10px; */
 }
