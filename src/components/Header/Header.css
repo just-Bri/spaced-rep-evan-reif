@@ -27,7 +27,7 @@ header {
   color: #011f26;
   /* padding: 10px;
   margin: 2.5%; */
-  margin-right: 5vw;
+  margin-right: 3rem;
 }
 
 .register-link {
@@ -41,5 +41,5 @@ header {
   color: #011f26;
   text-decoration: none;
   font-variant: small-caps;
-  margin-right: 20vw;
+  margin-right: 3rem;
 }
