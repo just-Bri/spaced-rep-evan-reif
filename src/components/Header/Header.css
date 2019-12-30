@@ -1,11 +1,9 @@
 nav {
-  color: #011f26;
   display: inline;
 }
 
 header {
   background-color: #05c7f2;
-  color: #011f26;
   /* padding: 2vh 0vw 2vh 2vw;
   margin: 0 auto; */
   display: flex;
@@ -16,30 +14,42 @@ header {
 
 .logout-link {
   text-decoration: none;
-  color: #011f26;
   /* padding: 10px;
   margin: 2.5%;
   right: 0; */
+  color: white;
 }
 
 .login-link {
   text-decoration: none;
-  color: #011f26;
   /* padding: 10px;
   margin: 2.5%; */
-  margin-right: 3rem;
+  margin-right: 2rem;
+  color: white;
 }
 
 .register-link {
   text-decoration: none;
-  color: #011f26;
   /* padding: 10px;
   margin: 2.5%; */
+  color: white;
+}
+
+.logout-link:hover {
+  color: #011f26;
+
+}
+
+.login-link:hover {
+  color: #011f26;
+}
+
+.register-link:hover {
+  color: #011f26;
 }
 
 .header-link {
-  color: #011f26;
   text-decoration: none;
   font-variant: small-caps;
-  margin-right: 3rem;
+  margin-right: 1rem;
 }

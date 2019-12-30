@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import TokenService from "../../services/token-service";
 import UserContext from "../../contexts/UserContext";
 import "./Header.css";
+import Logo from '../../susu.png';
 
 class Header extends Component {
   static contextType = UserContext;
@@ -46,7 +47,7 @@ class Header extends Component {
       <header>
         <h1>
           <Link to="/" className="header-link">
-            Not Petful
+            <img src={Logo} alt='Semper Ubi Sub Ubi' />
           </Link>
         </h1>
         {TokenService.hasAuthToken()
