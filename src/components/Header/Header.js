@@ -36,7 +36,7 @@ class Header extends Component {
           Login
         </Link>{" "}
         <Link to="/register" className="register-link">
-          Signup
+          Sign up
         </Link>
       </nav>
     );

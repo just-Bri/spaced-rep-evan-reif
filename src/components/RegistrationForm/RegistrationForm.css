@@ -1,3 +1,12 @@
 .registration-form {
   text-align: center;
 }
+
+.already-registered {
+  display: block;
+  margin: 5px;
+}
+
+.register-submit-button {
+  margin: 20px;
+}
