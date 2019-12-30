@@ -1,5 +1,11 @@
 nav {
   display: inline;
+  padding-bottom: 1rem;
+}
+
+nav a {
+  padding: 0.25rem;
+  border: 1px solid white;
 }
 
 header {
@@ -7,7 +13,7 @@ header {
   /* padding: 2vh 0vw 2vh 2vw;
   margin: 0 auto; */
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -37,7 +43,6 @@ header {
 
 .logout-link:hover {
   color: #011f26;
-
 }
 
 .login-link:hover {
