@@ -5,10 +5,16 @@ import IdleService from '../services/idle-service'
 
 const UserContext = React.createContext({
   user: {},
+  words: [],
+  head: [],
+  guess: [],
+  language: {},
   error: null,
   setError: () => {},
+  setGuess: () => {},
   clearError: () => {},
   setUser: () => {},
+  setHead: () => {},
   processLogin: () => {},
   processLogout: () => {},
 })
@@ -18,7 +24,7 @@ export default UserContext
 export class UserProvider extends Component {
   constructor(props) {
     super(props)
-    const state = { user: {}, error: null }
+    const state = { user: {}, error: null, language: {}, words: [], head: [], guess: [] }
 
     const jwtPayload = TokenService.parseAuthToken()
 
@@ -58,6 +64,20 @@ export class UserProvider extends Component {
 
   setUser = user => {
     this.setState({ user })
+  }
+  setWords = words => {
+    this.setState({ words })
+  }
+  setLanguage = language => {
+    this.setState({ language })
+  }
+
+  setHead = head => {
+    this.setState({ head })
+  }
+
+  setGuess = guess => {
+    this.setState({ guess })
   }
 
   processLogin = authToken => {
@@ -104,12 +124,20 @@ export class UserProvider extends Component {
   render() {
     const value = {
       user: this.state.user,
+      language: this.state.language,
+      words: this.state.words,
+      head: this.state.head,
+      guess: this.state.guess,
       error: this.state.error,
       setError: this.setError,
       clearError: this.clearError,
       setUser: this.setUser,
       processLogin: this.processLogin,
       processLogout: this.processLogout,
+      setLanguage: this.setLanguage,
+      setWords: this.setWords,
+      setHead: this.setHead,
+      setGuess: this.setGuess
     }
     return (
       <UserContext.Provider value={value}>

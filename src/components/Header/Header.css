@@ -58,3 +58,7 @@ header {
   font-variant: small-caps;
   margin-right: 1rem;
 }
+
+.user-name {
+  margin: 0px;
+}
