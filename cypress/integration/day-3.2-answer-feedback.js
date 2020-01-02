@@ -67,13 +67,9 @@ describe(`User story: Answer feedback`, function() {
         response: 'fixture:language-guess-incorrect.json',
       })
         .as('postListGuessIncorrect')
-        console.log('after as')
       cy.login().visit(`/learn`).wait('@languageHeadRequest')
-      console.log('after login')
       cy.get('input#learn-guess-input').type(guess)
-      console.log('after get input#')
       cy.get('form').submit().wait('@postListGuessIncorrect')
-      console.log('after submit')
     })
 
     it(`displays score and feedback the word was incorrect`, () => {

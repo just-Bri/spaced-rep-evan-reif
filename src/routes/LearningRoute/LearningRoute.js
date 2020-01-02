@@ -11,7 +11,6 @@ class LearningRoute extends Component {
   componentDidMount() {
     LanguageApiService.getHead()
       .then(res => {
-        console.log(res)
         this.context.setHead(res);
       });
   }
