@@ -16,10 +16,26 @@ const LanguageApiService = {
       })
         .then(res => {
           if (!res.ok) {
-            res.json().then(e => Promise.reject(e))
+            return res.json().then(e => Promise.reject(e))
           } else {
-            return res.json()}
-          })
+            return res.json()
+          }
+      })
+  },
+  getHead(){
+    return fetch(`${config.API_ENDPOINT}/language/head`, {
+    method: "GET",
+    headers: {
+      'authorization': `Bearer ${TokenService.getAuthToken()}`
+    }
+    })
+    .then(res => {
+      if (!res.ok) {
+        return res.json().then(e => Promise.reject(e));
+      }
+      // console.log(res)
+      return res.json();
+    })
   }
 }
 
