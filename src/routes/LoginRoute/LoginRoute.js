@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import LoginForm from "../../components/LoginForm/LoginForm";
-import { Link } from 'react-router-dom';
 import "./LoginRoute.css";
 
 class LoginRoute extends Component {

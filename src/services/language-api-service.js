@@ -9,7 +9,7 @@ const LanguageApiService = {
         headers: {
           authorization: `Bearer ${TokenService.getAuthToken()}`,
         },
-        body: JSON.stringify({ "guess": guessValue })
+        body: JSON.stringify({guess: guessValue})
       })
         .then(res => {
           if (!res.ok) {
