@@ -3,16 +3,14 @@ import Button from "../Button/Button";
 import UserContext from "../../contexts/UserContext";
 import LanguageApiService from "../../services/language-api-service";
 import "./LearningComponent.css";
-import buttonmp3 from './button_button.mp3';
+import buttonmp3 from "./button_button.mp3";
 
 export default class LearningComponent extends Component {
   state = {
     guess: null,
     guessed: false,
-    response: null
+    response: null,
   };
-
-  
 
   static contextType = UserContext;
 
@@ -21,43 +19,40 @@ export default class LearningComponent extends Component {
     audio.play();
   };
 
-  wait = (ms) => {
+  wait = ms => {
     var start = new Date().getTime();
     var end = start;
-    while(end < start + ms) {
+    while (end < start + ms) {
       end = new Date().getTime();
     }
-  }
+  };
 
   handleSubmit = e => {
     e.preventDefault();
     this.play();
-    this.wait(1500)
+    this.wait(1500);
     let guessValue = document.getElementById("learn-guess-input").value;
     this.setState({
       guess: guessValue.trim(),
       guessed: true,
-      currentWord: this.context.head.nextWord
+      currentWord: this.context.head.nextWord,
     });
     document.getElementById("learn-guess-input").value = "";
     LanguageApiService.postGuess(guessValue).then(res =>
-      this.context.setGuess(res)
-    )
-    
+      this.context.setGuess(res),
+    );
   };
 
   handleNextWord = () => {
     this.setState({
       guess: null,
-      guessed: false
+      guessed: false,
     });
     this.context.setHead("");
     LanguageApiService.getHead().then(res => {
       this.context.setHead(res);
     });
   };
-
-  
 
   handleQuestion = () => {
     return (
@@ -68,7 +63,7 @@ export default class LearningComponent extends Component {
           <label htmlFor="learn-guess-input">
             What's the translation for this word?
           </label>
-          <input id="learn-guess-input" type="text" required/>
+          <input id="learn-guess-input" type="text" required />
           <Button type="submit">Submit your answer</Button>
           {/* <audio ref={(input) => {this.audioRef = input}} src={buttonmp3} style={{ display: 'none' }} /> */}
           <audio id="audio" src={buttonmp3}></audio>
