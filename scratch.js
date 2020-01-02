@@ -1,14 +1,20 @@
-get head => answer, currWord, numbers
-  Semper - always
-post guess => 
+GET /head => 
+  responseObject = {
+    answer: currentWord.translation,
+    nextWord: currentWord.original,
+    wordCorrectCount: currentWord.correct_count,
+    wordIncorrectCount: currentWord.incorrect_count,
+    totalScore: language.total_score
+  };
+POST /guess => 
   resObj = {
     // word you guessed
-    answer: answer,
-    // globs
+    answer: currentWord.answer,
     isCorrect: isCorrect,
+    // globs
     totalScore: language.total_score,
     // actually the 'next' word
-    wordCorrectCount: currList.head.value.correct_count,
-    wordIncorrectCount: currList.head.value.incorrect_count,
-    nextWord: currList.head.value.original
+    wordCorrectCount: nextWord.correct_count,
+    wordIncorrectCount: nextWord.incorrect_count,
+    nextWord: nextWord.original
   };
