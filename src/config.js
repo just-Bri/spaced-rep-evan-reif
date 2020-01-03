@@ -1,3 +1,3 @@
 export default {
-  API_ENDPOINT: "https://latin-evan-reif.herokuapp.com/api",
+  API_ENDPOINT: "https://latin-translator-api-evan-reif.herokuapp.com/api",
 };
