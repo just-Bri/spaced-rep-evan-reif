@@ -10,7 +10,7 @@ Link to API repo: https://github.com/reifnotreef/spaced-rep-api-evan-reif
 
 ### Introduction
 
-This application is a platform for learning latin through the spaced repition method. This method is known to help with memorization, and makes learning languages much easier. Users can sign up, login, and are presented with a dashboard containing a list of words they will learn. The user can then press 'Start Practicing' to be given a Latin word that they must translate. The app keeps track of score for each word, as well as their total score.
+This application is a platform for learning latin through the spaced repitition method. This method is known to help with memorization, and makes learning languages much easier. Users can sign up, login, and are presented with a dashboard containing a list of words they will learn. The user can then press 'Start Practicing' to be given a Latin word that they must translate. The app keeps track of score for each word, as well as their total score.
 
 ### Technology Stack
 
